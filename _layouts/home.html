@@ -1,0 +1,13 @@
+---
+layout: default
+---
+{% for item in site.data['Stories-Master'] %}
+    <a href="{{ item.Link }}" target="_blank" class="story">
+        <div class="elem">
+            <h2>{{ item.Name }}</h2><span class="dot">·</span><h4>{{ item.Title }}</h4>
+        </div>
+        <div class="arrow">
+            &rsaquo;
+        </div>
+    </a>
+{% endfor %}
