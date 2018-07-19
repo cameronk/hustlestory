@@ -55,6 +55,7 @@ header {
 section#main { }
 footer {
     margin-top: $gutter;
+    margin-bottom: $gutter;
     text-align: center;
 
     @include for-large-screens {
