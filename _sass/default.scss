@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Oxygen", Verdana, Geneva;
+    color: #333;
 }
 
 a {
@@ -52,7 +53,22 @@ header {
 }
 
 section#main { }
-footer { }
+footer {
+    margin-top: $gutter;
+    text-align: center;
+
+    @include for-large-screens {
+        margin-top: $gutter * 1.5;
+    }
+
+    div {
+        margin-top: 3px;
+        a {
+            font-size: 13px;
+            // color: #000;
+        }
+    }
+}
 h1,h2,h3,h4,h5,h6 { font-weight: 300; }
 
 
@@ -75,6 +91,9 @@ h1,h2,h3,h4,h5,h6 { font-weight: 300; }
 
     &.view-all {
         justify-content: center;
+        padding-top: $gutter / 2;
+        padding-bottom: $gutter / 2;
+        padding-right: $gutter; // fix imbalance
     }
 
     @include for-small-screens {
@@ -122,7 +141,7 @@ h1,h2,h3,h4,h5,h6 { font-weight: 300; }
         display: inline-block;
         margin: 0;
         text-overflow: ellipsis;
-        color: #333;
+        // color: #333;
 
         @include for-small-screens {
             display: block;
