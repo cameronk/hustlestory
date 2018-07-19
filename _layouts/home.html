@@ -1,13 +1,21 @@
 ---
 layout: default
 ---
-{% for item in site.data['Stories-Master'] %}
-    <a href="{{ item.Link }}" target="_blank" class="story">
-        <div class="elem">
-            <h2>{{ item.Name }}</h2><span class="dot">·</span><h4>{{ item.Title }}</h4>
-        </div>
-        <div class="arrow">
-            &rsaquo;
-        </div>
+<div class="about">
+    <h2>Collecting stories of the struggle for success.</h2>
+</div>
+
+{% assign limit = 9 %}
+<div class="stories">
+    {% for counter in (0..limit) %}
+        {% assign item = site.data['Stories-Live'][counter] %}
+        {% if item %}
+            {% include item.html item=item %}
+        {% else %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+    <a href="{{ site.url }}{% link all.md %}" class="story view-all">
+        view all
     </a>
-{% endfor %}
+</div>

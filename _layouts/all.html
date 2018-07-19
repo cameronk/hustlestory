@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<div class="stories">
+    {% for item in site.data['Stories-Live'] %}
+        {% include item.html item=item %}
+    {% endfor %}
+</div>
