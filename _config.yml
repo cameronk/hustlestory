@@ -26,6 +26,11 @@ twitter:
   card: summary
 logo: "/assets/android-chrome-256x256.png"
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/android-chrome-256x256.png
 
 # Build settings
 markdown: kramdown
